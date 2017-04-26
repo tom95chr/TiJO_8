@@ -1,0 +1,77 @@
+> stryker run stryker.conf.js
+
+[2017-04-26 10:39:30.463] [INFO] InputFileResolver - Found 1 of 2 file(s) to be mutated.
+[2017-04-26 10:39:30.468] [INFO] SandboxCoordinator - Starting initial test run. This may take a while.
+[2017-04-26 10:39:31.125] [INFO] Stryker - Initial test run succeeded. Ran 3 tests in 0 seconds.
+[2017-04-26 10:39:31.169] [INFO] Stryker - 22 Mutant(s) generated
+[2017-04-26 10:39:31.179] [INFO] SandboxCoordinator - Creating 2 test runners (based on CPU count)
+Mutation testing  [] 100% (ETC 0.0s)[15 killed] [6 survived] [0 no coverage] [1 timeout] [0 error]
+
+Mutant survived!
+/home/student/ch/TiJO_8/app/app.js: line 3:8
+Mutator: RemoveConditionals
+-       if (isNaN(num)) {
++       if (true) {
+
+Tests ran:
+    reverseNumber should return false if the argument is type of string
+
+Mutant survived!
+/home/student/ch/TiJO_8/app/app.js: line 12:8
+Mutator: RemoveConditionals
+-       if (typeof str !== 'string') {
++       if (false) {
+
+Tests ran:
+    returnOnlyLetter should return ole
+
+Mutant survived!
+/home/student/ch/TiJO_8/app/app.js: line 12:33
+Mutator: BlockStatement
+-       if (typeof str !== 'string') {
+-           return false;
+-       }
++       if (typeof str !== 'string') {
++   }
+
+Tests ran:
+    returnOnlyLetter should return ole
+
+Mutant survived!
+/home/student/ch/TiJO_8/app/app.js: line 19:20
+Mutator: BinaryOperator
+-       for (var i = 0; i <= x; i++) {
++       for (var i = 0; i < x; i++) {
+
+Tests ran:
+    returnOnlyLetter should return ole
+
+Mutant survived!
+/home/student/ch/TiJO_8/app/app.js: line 30:8
+Mutator: RemoveConditionals
+-       if (pattern.test(email)) {
++       if (true) {
+
+Tests ran:
+    isEmail should return true for email: tom.chr@asd.com
+
+Mutant survived!
+/home/student/ch/TiJO_8/app/app.js: line 32:11
+Mutator: BlockStatement
+-       } else {
+-           return false;
+-       }
++       } else {
++   }
+
+Tests ran:
+    isEmail should return true for email: tom.chr@asd.com
+
+22 total mutants.
+6 mutants survived.
+1 mutants timed out.
+15 mutants killed.
+Ran 1.09 tests per mutant on average.
+Mutation score based on covered code: 72.73%
+Mutation score based on all code: 72.73%
+[2017-04-26 10:39:39.576] [INFO] Stryker - Done in 9 seconds.
